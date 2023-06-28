@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { GlobalContainer } from '../../globalContainer/GlobalContainer';
 import { getUsers } from '../../redux/usersOperations';
-import { selectUsers } from '../../redux/usersSelector';
+import { selectTotalPages, selectUsers } from '../../redux/usersSelector';
 import Spinner from '../Spinner/Spinner';
 import UserCard from '../UserCard/UserCard';
 import { MoreButton, UsersContainer } from './Users.styled';
@@ -11,6 +11,7 @@ const Users = () => {
   const [page, setPage] = useState(2);
 
   const users = useSelector(selectUsers);
+  const totalPages = useSelector(selectTotalPages);
   const dispatch = useDispatch();
 
   const getMoreUsers = () => {
@@ -29,15 +30,17 @@ const Users = () => {
           <Spinner />
         )}
       </UsersContainer>
-      <MoreButton>
-        <button
-          className="users__more-btn"
-          type="button"
-          onClick={getMoreUsers}
-        >
-          Show more
-        </button>
-      </MoreButton>
+      {page !== totalPages && (
+        <MoreButton>
+          <button
+            className="users__more-btn"
+            type="button"
+            onClick={getMoreUsers}
+          >
+            Show more
+          </button>
+        </MoreButton>
+      )}
     </GlobalContainer>
   );
 };

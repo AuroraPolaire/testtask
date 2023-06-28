@@ -24,9 +24,8 @@ export const getUsers = createAsyncThunk(
   'users/getUsers',
   async ({ page }, thunkApi) => {
     try {
-      const { users } = await fetchUsers({ page });
-      console.log(users);
-      return users;
+      const data = await fetchUsers({ page });
+      return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }

@@ -12,6 +12,7 @@ const usersSlice = createSlice({
   initialState: {
     token: null,
     users: [],
+    totalPages: 0,
     positions: [],
     userId: [],
     registered: false,
@@ -35,8 +36,10 @@ const usersSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getUsers.fulfilled, (state, { payload }) => {
+        console.log(payload);
         state.isLoading = false;
-        state.users = [...state.users, ...payload];
+        state.users = [...state.users, ...payload.users];
+        state.totalPages = payload.total_pages;
       })
       .addCase(getUsers.rejected, state => {
         state.isLoading = true;
