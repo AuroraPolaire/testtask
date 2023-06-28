@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.663634bf.js",
-    "static/media/desktop_bg2x.webp": "/static/media/desktop_bg2x.7b54d17eff404640a777.webp",
-    "static/media/tab_bg2x.webp": "/static/media/tab_bg2x.0cb742edd545a26483d3.webp",
-    "static/media/mob_bg2x.webp": "/static/media/mob_bg2x.e9e22d25b67a6f04e874.webp",
-    "static/media/desktop_bg1x.webp": "/static/media/desktop_bg1x.272cd554b9874656a8bd.webp",
-    "static/media/tab_bg1x.webp": "/static/media/tab_bg1x.0ac728305130c7dba9cc.webp",
-    "static/media/mob_bg1x.webp": "/static/media/mob_bg1x.fc90dc3f4cc5c37797aa.webp",
-    "static/media/success-image.svg": "/static/media/success-image.0d3202ba11b04fa7364b0f83ce42aea5.svg",
-    "static/media/Logo.svg": "/static/media/Logo.5860648460c83017402593e1d7c3c556.svg",
-    "static/media/photo-cover.svg": "/static/media/photo-cover.fb98cf13a87225efe558669bdc541ac7.svg",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.663634bf.js.map": "/static/js/main.663634bf.js.map"
+    "main.css": "/testtask/static/css/main.073c9b0a.css",
+    "main.js": "/testtask/static/js/main.161596ac.js",
+    "static/media/desktop_bg2x.webp": "/testtask/static/media/desktop_bg2x.7b54d17eff404640a777.webp",
+    "static/media/tab_bg2x.webp": "/testtask/static/media/tab_bg2x.0cb742edd545a26483d3.webp",
+    "static/media/mob_bg2x.webp": "/testtask/static/media/mob_bg2x.e9e22d25b67a6f04e874.webp",
+    "static/media/desktop_bg1x.webp": "/testtask/static/media/desktop_bg1x.272cd554b9874656a8bd.webp",
+    "static/media/tab_bg1x.webp": "/testtask/static/media/tab_bg1x.0ac728305130c7dba9cc.webp",
+    "static/media/mob_bg1x.webp": "/testtask/static/media/mob_bg1x.fc90dc3f4cc5c37797aa.webp",
+    "static/media/success-image.svg": "/testtask/static/media/success-image.0d3202ba11b04fa7364b0f83ce42aea5.svg",
+    "static/media/Logo.svg": "/testtask/static/media/Logo.5860648460c83017402593e1d7c3c556.svg",
+    "static/media/photo-cover.svg": "/testtask/static/media/photo-cover.fb98cf13a87225efe558669bdc541ac7.svg",
+    "index.html": "/testtask/index.html",
+    "main.073c9b0a.css.map": "/testtask/static/css/main.073c9b0a.css.map",
+    "main.161596ac.js.map": "/testtask/static/js/main.161596ac.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.663634bf.js"
+    "static/js/main.161596ac.js"
   ]
 }
