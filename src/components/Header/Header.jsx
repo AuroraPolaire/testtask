@@ -1,13 +1,13 @@
-import React from "react";
-import { GlobalContainer } from "../../globalContainer/GlobalContainer";
-import { ReactComponent as Logo } from "../../img/Logo.svg";
-import { StyledHeader } from "./Header.styled";
+import React from 'react';
+import { GlobalContainer } from '../../globalContainer/GlobalContainer';
+import { ReactComponent as Logo } from '../../img/Logo.svg';
+import { StyledHeader } from './Header.styled';
 
 const Header = () => {
-  const handleButtonClick = (id) => {
+  const handleButtonClick = id => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -19,14 +19,14 @@ const Header = () => {
           <button
             className="header__button"
             type="button"
-            onClick={() => handleButtonClick("users")}
+            onClick={() => handleButtonClick('users')}
           >
             Users
           </button>
           <button
             className="header__button"
             type="button"
-            onClick={() => handleButtonClick("signup")}
+            onClick={() => handleButtonClick('signup')}
           >
             Sign Up
           </button>

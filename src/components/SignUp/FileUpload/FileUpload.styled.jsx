@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { ErrorMessage } from "formik";
+import styled from 'styled-components';
 
 export const FileContainer = styled.div`
   position: relative;

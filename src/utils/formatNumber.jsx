@@ -1,6 +1,6 @@
-export const formatNumber = (phone) => {
+export const formatNumber = phone => {
   let number;
-  phone[0] === "+" ? (number = phone.slice(1, phone.length)) : (number = phone);
+  phone[0] === '+' ? (number = phone.slice(1, phone.length)) : (number = phone);
   const countryCode = number.slice(0, 2);
   const areaCode = number.slice(2, 5);
   const firstPart = number.slice(5, 8);

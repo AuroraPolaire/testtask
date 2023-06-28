@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Field, ErrorMessage } from "formik";
+import styled from 'styled-components';
+import { Field, ErrorMessage } from 'formik';
 
 export const StyledLabel = styled.label`
   position: absolute;

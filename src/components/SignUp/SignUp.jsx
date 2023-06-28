@@ -1,15 +1,15 @@
-import React from "react";
-import { Formik, Form } from "formik";
+import React from 'react';
+import { Formik, Form } from 'formik';
 
-import { useSelector, useDispatch } from "react-redux";
-import { selectPositions } from "../../redux/usersSelector";
-import { getUsers, sendUser } from "../../redux/usersOperations";
-import { SignupSchema } from "../../utils/validation";
-import PersonalDataForm from "./PersonalDataForm/PersonalDataForm";
-import Select from "./Select/Select";
-import FileUpload from "./FileUpload/FileUpload";
-import { FormContainer } from "./SignUp.styled";
-import { GlobalContainer } from "../../globalContainer/GlobalContainer";
+import { useSelector, useDispatch } from 'react-redux';
+import { selectPositions } from '../../redux/usersSelector';
+import { getUsers, sendUser } from '../../redux/usersOperations';
+import { SignupSchema } from '../../utils/validation';
+import PersonalDataForm from './PersonalDataForm/PersonalDataForm';
+import Select from './Select/Select';
+import FileUpload from './FileUpload/FileUpload';
+import { FormContainer } from './SignUp.styled';
+import { GlobalContainer } from '../../globalContainer/GlobalContainer';
 
 const SignUp = () => {
   const positions = useSelector(selectPositions);
@@ -21,29 +21,29 @@ const SignUp = () => {
       <FormContainer id="signup">
         <Formik
           initialValues={{
-            name: "",
-            email: "",
-            phone: "",
+            name: '',
+            email: '',
+            phone: '',
             position_id: positions[0]?.id,
-            photo: "",
+            photo: '',
           }}
           validationSchema={SignupSchema}
           validateOnChange={true}
           onSubmit={(values, { setSubmitting }) => {
             let formData = new FormData();
-            Object.keys(values).forEach((value) => {
+            Object.keys(values).forEach(value => {
               formData.append(value, values[value]);
             });
 
             dispatch(sendUser(formData))
               .unwrap()
-              .then((result) => {
-                console.log("then after unwrap");
+              .then(() => {
+                console.log('then after unwrap');
                 dispatch(getUsers({ page: 1 }));
                 setSubmitting(false);
               })
-              .catch((error) => {
-                console.error("Error sending user:", error);
+              .catch(error => {
+                console.error('Error sending user:', error);
                 setSubmitting(false);
               });
           }}

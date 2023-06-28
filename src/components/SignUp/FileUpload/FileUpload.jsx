@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { FileContainer, StyledError } from "./FileUpload.styled";
+import React, { useState } from 'react';
+import { FileContainer, StyledError } from './FileUpload.styled';
+import PropTypes from 'prop-types';
 
-const FileUpload = ({ setFieldValue, errors, touched }) => {
+const FileUpload = ({ setFieldValue, errors }) => {
   const [selectedFile, setSelectedFile] = useState(null);
 
   return (
@@ -10,15 +11,15 @@ const FileUpload = ({ setFieldValue, errors, touched }) => {
         id="photo"
         type="file"
         className="form__file-input-field"
-        onChange={(event) => {
-          setFieldValue("photo", event.currentTarget.files[0]);
+        onChange={event => {
+          setFieldValue('photo', event.currentTarget.files[0]);
           setSelectedFile(event.currentTarget.files[0]);
         }}
       />
       <label
         htmlFor="photo"
         className={`form__file-input-label ${
-          errors.photo ? "error-upload" : ""
+          errors.photo ? 'error-upload' : ''
         }`}
       >
         Upload
@@ -26,16 +27,21 @@ const FileUpload = ({ setFieldValue, errors, touched }) => {
       <label
         htmlFor="photo"
         className={`form__file-input-label-placeholder ${
-          selectedFile ? "file-selected" : ""
-        } ${errors.photo && "error-upload"}`}
+          selectedFile ? 'file-selected' : ''
+        } ${errors.photo && 'error-upload'}`}
       >
         {selectedFile
-          ? selectedFile.name.slice(0, 22) + "..."
-          : "Upload your photo"}
+          ? selectedFile.name.slice(0, 22) + '...'
+          : 'Upload your photo'}
       </label>
       <StyledError>{errors.photo}</StyledError>
     </FileContainer>
   );
+};
+
+FileUpload.propTypes = {
+  setFieldValue: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired,
 };
 
 export default FileUpload;

@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import backgroundMobile from "../../img/mob_bg1x.webp";
-import backgroundMobileRetina from "../../img/mob_bg2x.webp";
+import backgroundMobile from '../../img/mob_bg1x.webp';
+import backgroundMobileRetina from '../../img/mob_bg2x.webp';
 
-import backgroundTablet from "../../img/tab_bg1x.webp";
-import backgroundTabletRetina from "../../img/tab_bg2x.webp";
+import backgroundTablet from '../../img/tab_bg1x.webp';
+import backgroundTabletRetina from '../../img/tab_bg2x.webp';
 
-import backgroundDesktop from "../../img/desktop_bg1x.webp";
-import backgroundDesktopRetina from "../../img/desktop_bg2x.webp";
+import backgroundDesktop from '../../img/desktop_bg1x.webp';
+import backgroundDesktopRetina from '../../img/desktop_bg2x.webp';
 
 export const BackgroundContainer = styled.section`
   width: 100%;

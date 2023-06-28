@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { GlobalContainer } from "../../globalContainer/GlobalContainer";
-import { getUsers } from "../../redux/usersOperations";
-import { selectUsers } from "../../redux/usersSelector";
-import Spinner from "../Spinner/Spinner";
-import UserCard from "../UserCard/UserCard";
-import { MoreButton, UsersContainer } from "./Users.styled";
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { GlobalContainer } from '../../globalContainer/GlobalContainer';
+import { getUsers } from '../../redux/usersOperations';
+import { selectUsers } from '../../redux/usersSelector';
+import Spinner from '../Spinner/Spinner';
+import UserCard from '../UserCard/UserCard';
+import { MoreButton, UsersContainer } from './Users.styled';
 
 const Users = () => {
   const [page, setPage] = useState(2);
@@ -13,7 +13,7 @@ const Users = () => {
   const users = useSelector(selectUsers);
   const dispatch = useDispatch();
 
-  const getMoreUsers = (e) => {
+  const getMoreUsers = () => {
     dispatch(getUsers({ page }));
     setPage(page + 1);
   };
@@ -22,7 +22,7 @@ const Users = () => {
     <GlobalContainer>
       <UsersContainer id="users">
         {users.length !== null ? (
-          users.map((user) => {
+          users.map(user => {
             return <UserCard key={user.id} user={user} />;
           })
         ) : (

@@ -1,6 +1,7 @@
-import React from "react";
-import { GlobalContainer } from "../../globalContainer/GlobalContainer";
-import { StyledTitle } from "./Title.styled";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { GlobalContainer } from '../../globalContainer/GlobalContainer';
+import { StyledTitle } from './Title.styled';
 
 const Title = ({ title }) => {
   return (
@@ -8,6 +9,10 @@ const Title = ({ title }) => {
       <StyledTitle>{title}</StyledTitle>
     </GlobalContainer>
   );
+};
+
+Title.propTypes = {
+  title: PropTypes.string.isRequired,
 };
 
 export default Title;

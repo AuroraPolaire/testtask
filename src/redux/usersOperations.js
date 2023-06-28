@@ -1,14 +1,14 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import {
   fetchPositions,
   fetchToken,
   fetchUserInfo,
   fetchUsers,
   postUser,
-} from "../services/usersAPI";
+} from '../services/usersAPI';
 
 export const getToken = createAsyncThunk(
-  "token/fetchToken",
+  'token/fetchToken',
   async (_, thunkApi) => {
     try {
       const { token } = await fetchToken();
@@ -21,7 +21,7 @@ export const getToken = createAsyncThunk(
 );
 
 export const getUsers = createAsyncThunk(
-  "users/getUsers",
+  'users/getUsers',
   async ({ page }, thunkApi) => {
     try {
       const { users } = await fetchUsers({ page });
@@ -34,7 +34,7 @@ export const getUsers = createAsyncThunk(
 );
 
 export const sendUser = createAsyncThunk(
-  "users/postUser",
+  'users/postUser',
   async (formData, thunkApi) => {
     try {
       const data = await postUser(formData);
@@ -47,7 +47,7 @@ export const sendUser = createAsyncThunk(
 );
 
 export const getPositions = createAsyncThunk(
-  "users/positions",
+  'users/positions',
   async (_, thunkApi) => {
     try {
       const { positions } = await fetchPositions();
@@ -60,7 +60,7 @@ export const getPositions = createAsyncThunk(
 );
 
 export const getUserInfo = createAsyncThunk(
-  "users/getUserInfo",
+  'users/getUserInfo',
   async (id, thunkApi) => {
     try {
       const { data } = await fetchUserInfo(id);

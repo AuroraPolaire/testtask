@@ -1,9 +1,10 @@
-import { Field } from "formik";
-import React from "react";
-import { useSelector } from "react-redux";
-import { selectPositions } from "../../../redux/usersSelector";
-import Spinner from "../../Spinner/Spinner";
-import { SelectContainer, StyledError } from "./Select.styled";
+import { Field } from 'formik';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectPositions } from '../../../redux/usersSelector';
+import Spinner from '../../Spinner/Spinner';
+import { SelectContainer, StyledError } from './Select.styled';
+import PropTypes from 'prop-types';
 
 const Select = ({ setFieldValue }) => {
   const positions = useSelector(selectPositions);
@@ -24,7 +25,7 @@ const Select = ({ setFieldValue }) => {
                   type="radio"
                   name="position_id"
                   value={id}
-                  onChange={() => setFieldValue("position_id", id)}
+                  onChange={() => setFieldValue('position_id', id)}
                   className="form__select-input"
                 />
                 {name}
@@ -38,6 +39,10 @@ const Select = ({ setFieldValue }) => {
       <StyledError name="position_id" component="div" />
     </SelectContainer>
   );
+};
+
+Select.propTypes = {
+  setFieldValue: PropTypes.func.isRequired,
 };
 
 export default Select;

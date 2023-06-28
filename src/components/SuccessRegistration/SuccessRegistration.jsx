@@ -1,7 +1,7 @@
-import React from "react";
-import Title from "../Title/Title";
-import successImg from "../../img/success-image.svg";
-import { SuccessRegistrationStyled } from "./SuccessRegistration.styled";
+import React from 'react';
+import Title from '../Title/Title';
+import successImg from '../../img/success-image.svg';
+import { SuccessRegistrationStyled } from './SuccessRegistration.styled';
 
 const SuccessRegistration = () => {
   return (

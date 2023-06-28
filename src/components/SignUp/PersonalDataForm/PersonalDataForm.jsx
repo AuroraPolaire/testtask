@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
   StyledError,
   StyledField,
   StyledLabel,
   StyledNumberFormat,
-} from "./PersonalDataForm.styled";
+} from './PersonalDataForm.styled';
+import PropTypes from 'prop-types';
 
 const PersonalDataForm = ({ errors, touched }) => {
   return (
@@ -14,7 +15,7 @@ const PersonalDataForm = ({ errors, touched }) => {
           type="text"
           name="name"
           placeholder="&nbsp;"
-          className={errors.name && touched.name ? "error-label" : ""}
+          className={errors.name && touched.name ? 'error-label' : ''}
         />
         <StyledLabel htmlFor="name" className="label">
           Your name
@@ -26,7 +27,7 @@ const PersonalDataForm = ({ errors, touched }) => {
           type="email"
           name="email"
           placeholder="&nbsp;"
-          className={errors.email && touched.email ? "error-label" : ""}
+          className={errors.email && touched.email ? 'error-label' : ''}
         />
         <StyledLabel htmlFor="email" className="label">
           Email
@@ -39,7 +40,7 @@ const PersonalDataForm = ({ errors, touched }) => {
           name="phone"
           placeholder="&nbsp;"
           id="phone"
-          className={errors.phone && touched.phone ? "error-label" : ""}
+          className={errors.phone && touched.phone ? 'error-label' : ''}
         />
         <StyledLabel htmlFor="phone" className="label">
           Phone
@@ -53,6 +54,11 @@ const PersonalDataForm = ({ errors, touched }) => {
       </div>
     </>
   );
+};
+
+PersonalDataForm.propTypes = {
+  errors: PropTypes.object.isRequired,
+  touched: PropTypes.object.isRequired,
 };
 
 export default PersonalDataForm;
