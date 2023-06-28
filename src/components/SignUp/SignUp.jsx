@@ -38,7 +38,6 @@ const SignUp = () => {
             dispatch(sendUser(formData))
               .unwrap()
               .then(() => {
-                console.log('then after unwrap');
                 dispatch(getUsers({ page: 1 }));
                 setSubmitting(false);
               })

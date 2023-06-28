@@ -36,7 +36,6 @@ const usersSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getUsers.fulfilled, (state, { payload }) => {
-        console.log(payload);
         state.isLoading = false;
         state.users = [...state.users, ...payload.users];
         state.totalPages = payload.total_pages;

@@ -12,7 +12,6 @@ export const getToken = createAsyncThunk(
   async (_, thunkApi) => {
     try {
       const { token } = await fetchToken();
-      console.log(token);
       return token;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
@@ -37,7 +36,6 @@ export const sendUser = createAsyncThunk(
   async (formData, thunkApi) => {
     try {
       const data = await postUser(formData);
-      console.log(data);
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
@@ -50,7 +48,6 @@ export const getPositions = createAsyncThunk(
   async (_, thunkApi) => {
     try {
       const { positions } = await fetchPositions();
-      console.log(positions);
       return positions;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
@@ -63,7 +60,6 @@ export const getUserInfo = createAsyncThunk(
   async (id, thunkApi) => {
     try {
       const { data } = await fetchUserInfo(id);
-      console.log(data);
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
