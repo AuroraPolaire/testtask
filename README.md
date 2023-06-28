@@ -1,91 +1,38 @@
-# TestTask
+# Test App 'Food Delivery'
 
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+- Deployed on GH pages; -Implemented the “Working with a GET request” block
+  according to the mockup and API documentation.
+- Displayed 6 users on th is hidden when the last page of API query results is
+  reached. Users are sorted by registration date (the newest first).
+- Displayed radio buttons on the registration form, used the GET /positions
+  method from the API documentation.
+- Implemented front-end validation in accordance with mockups and API
+  documentation.
+- Implement the business logic of the registration form in accordance with
+  mockups and API documentation.
+- After successful registration, the list of users is updated in the “Working
+  with a GET request” block. If the “Show more” button has been clicked (i.e.
+  more than one page of users has been loaded from the API), all is collapsed
+  and only the first page of the result of the GET request is displayed. As a
+  result, the new user will be displayed first and he will be able to check the
+  correctness of the form.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+Link to demo https://aurorapolaire.github.io/testtask/
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Header and hero](https://i.ibb.co/Lz8MvTC/image.png)
+![Users](https://i.ibb.co/sgp392F/image.png)
+![Form](https://i.ibb.co/Zg9X0RB/image.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best
-performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
-
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn't feel obligated to use this
-feature. However we understand that this tool wouldn't be useful if you couldn't
-customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. React.
+2. Redux Toolkit.
+3. Axios.
+4. Styled-components.
+5. Formik
+6. Yup.
+7. React-spinners.
