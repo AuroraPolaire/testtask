@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <GlobalContainer>
       <StyledHeader>
-        <a href="/">
+        <a href="/testtask/">
           <Logo />
         </a>
         <div className="header__button-group">
