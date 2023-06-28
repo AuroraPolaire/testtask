@@ -1,7 +1,8 @@
-# Test App 'Food Delivery'
+# Test App 'TestTask'
 
-- Deployed on GH pages; -Implemented the “Working with a GET request” block
-  according to the mockup and API documentation.
+- Deployed on GH pages.
+- Implemented the “Working with a GET request” block according to the mockup and
+  API documentation.
 - Displayed 6 users on th is hidden when the last page of API query results is
   reached. Users are sorted by registration date (the newest first).
 - Displayed radio buttons on the registration form, used the GET /positions
@@ -16,6 +17,7 @@
   and only the first page of the result of the GET request is displayed. As a
   result, the new user will be displayed first and he will be able to check the
   correctness of the form.
+- Added tooltip if a name or an email are long.
 
 ## Demo
 

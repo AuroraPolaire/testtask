@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const UserCardStyled = styled.div`
+  padding: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,7 +10,6 @@ export const UserCardStyled = styled.div`
   width: 328px;
   background-color: #fff;
   border-radius: 10px;
-  padding: 20px;
 
   color: rgba(0, 0, 0, 0.87);
   line-height: 1.6;
