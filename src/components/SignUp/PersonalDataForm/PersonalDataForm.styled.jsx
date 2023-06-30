@@ -26,10 +26,11 @@ export const StyledField = styled(Field)`
 
   :focus + .label,
   :not(:placeholder-shown) + .label {
-    top: -10px;
+    font-size: 12px;
+    top: -7px;
     left: 15px;
     background: var(--background-color);
-    padding: 0 2px;
+    padding: 0 4px;
   }
 
   &.error-label {
