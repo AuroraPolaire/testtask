@@ -44,7 +44,12 @@ export const BackgroundContainer = styled.section`
 
     @media screen and (min-width: 1170px) {
       background-image: url(${backgroundDesktop});
-      background-size: 1170px;
+      background-size: 1170px auto;
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(${backgroundDesktopRetina});
+      }
     }
   }
 
